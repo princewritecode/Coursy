@@ -1,0 +1,40 @@
+body {
+  padding: 2rem;
+}
+#nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+#nav-items > ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+
+  align-items: center;
+}
+ul > li {
+  list-style: none;
+}
+.card {
+  max-width: 30%;
+  height: auto;
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: lightgray;
+  margin-top: 2rem;
+}
+.card img {
+  width: 100%;
+}
+.search {
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

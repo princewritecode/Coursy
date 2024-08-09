@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["header.css"],"sourcesContent":["#header {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n}\n"],"names":[],"version":3,"file":"episode1.3730d731.css.map","sourceRoot":"/__parcel_source_root/"}
