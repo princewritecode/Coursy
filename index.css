@@ -1,6 +1,9 @@
 body {
   padding: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
+
 #nav {
   display: flex;
   justify-content: space-between;
@@ -33,6 +36,7 @@ ul > li {
 .card:hover {
   transform: translateY(-0.5rem); /* Slight lift on hover */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  background-color: lightgray;
 }
 
 .card h3 {
@@ -61,4 +65,28 @@ ul > li {
 .cart-img {
   width: 30px;
   height: 30px;
+}
+.title {
+  font-size: larger;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#course-btn {
+  background-color: #4caf50; /* Green */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Spacing */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+#course-btn:hover {
+  background-color: darkgreen; /* Darker green on hover */
+}
+.info-headline {
+  font-weight: 300;
 }

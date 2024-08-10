@@ -27586,7 +27586,7 @@ function Body() {
                 children: (0, _courseData.courseData).unit.items.map((item)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
                         course: item
-                    }, void 0, false, {
+                    }, item.id, false, {
                         fileName: "Body.js",
                         lineNumber: 15,
                         columnNumber: 32
@@ -27622,11 +27622,13 @@ $parcel$ReactRefreshHelpers$b007.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CourseCard", ()=>CourseCard);
+parcelHelpers.export(exports, "CourseCard", ()=>CourseCard) //https://www.udemy.com/course/100-days-of-code/
+ //https://www.udemy.com/course/the-web-developer-
+;
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function CourseCard(props) {
     console.log(props);
-    const { avg_rating, id, image_480x270, headline } = props.course;
+    const { avg_rating, id, url, image_480x270, headline, published_title } = props.course;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
@@ -27634,34 +27636,75 @@ function CourseCard(props) {
                 src: image_480x270
             }, void 0, false, {
                 fileName: "CourseCard.js",
-                lineNumber: 7,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: avg_rating
-            }, void 0, false, {
-                fileName: "CourseCard.js",
                 lineNumber: 8,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: id
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: [
+                    "Rating ",
+                    avg_rating.toFixed(1) + " \u2B50\uFE0F"
+                ]
+            }, void 0, true, {
                 fileName: "CourseCard.js",
                 lineNumber: 9,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: headline
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "title",
+                        children: "Title"
+                    }, void 0, false, {
+                        fileName: "CourseCard.js",
+                        lineNumber: 10,
+                        columnNumber: 16
+                    }, this),
+                    "  - ",
+                    published_title.toUpperCase()
+                ]
+            }, void 0, true, {
                 fileName: "CourseCard.js",
                 lineNumber: 10,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "info-headline",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "title",
+                        children: "Course Information - "
+                    }, void 0, false, {
+                        fileName: "CourseCard.js",
+                        lineNumber: 11,
+                        columnNumber: 42
+                    }, this),
+                    headline
+                ]
+            }, void 0, true, {
+                fileName: "CourseCard.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                id: "course-btn",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    target: "blank",
+                    href: `https://www.udemy.com` + url,
+                    children: "Check Out This Course"
+                }, void 0, false, {
+                    fileName: "CourseCard.js",
+                    lineNumber: 12,
+                    columnNumber: 37
+                }, this)
+            }, void 0, false, {
+                fileName: "CourseCard.js",
+                lineNumber: 12,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "CourseCard.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 9
     }, this);
 }

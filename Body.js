@@ -12,7 +12,7 @@ export function Body()
                 {
                     courseData.unit.items.map((item) =>
                     {
-                        return <CourseCard course={item}></CourseCard>;
+                        return <CourseCard key={item.id} course={item}></CourseCard>;
                     })
                 }
             </div>
