@@ -9,7 +9,6 @@ export function Body()
                 <input type="search" placeholder="search course"></input>
             </div>
             <div className="container">
-
                 {
                     courseData.unit.items.map((item) =>
                     {

@@ -11,8 +11,8 @@ export function Header()
                 <ul>
                     <li>Home</li>
                     <li>About</li>
-                    <li>Contact Us</li>
-                    <img src={cart}></img>
+                    <li>Roadmap</li>
+                    <li>Cart <img className='cart-img' src={cart}></img></li>
                 </ul>
             </div>
         </div>

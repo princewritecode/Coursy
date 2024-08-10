@@ -27290,15 +27290,25 @@ function Header() {
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact Us"
+                            children: "Roadmap"
                         }, void 0, false, {
                             fileName: "Header.js",
                             lineNumber: 14,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: (0, _icons8Cart50PngDefault.default)
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: [
+                                "Cart ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "cart-img",
+                                    src: (0, _icons8Cart50PngDefault.default)
+                                }, void 0, false, {
+                                    fileName: "Header.js",
+                                    lineNumber: 15,
+                                    columnNumber: 30
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "Header.js",
                             lineNumber: 15,
                             columnNumber: 21
@@ -27578,7 +27588,7 @@ function Body() {
                         course: item
                     }, void 0, false, {
                         fileName: "Body.js",
-                        lineNumber: 16,
+                        lineNumber: 15,
                         columnNumber: 32
                     }, this);
                 })
@@ -27614,10 +27624,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CourseCard", ()=>CourseCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _enrolledSuccessfullyConceptFlatDesign600Nw2002387010Webp = require("./Assets/enrolled-successfully-concept-flat-design-600nw-2002387010.webp");
-var _enrolledSuccessfullyConceptFlatDesign600Nw2002387010WebpDefault = parcelHelpers.interopDefault(_enrolledSuccessfullyConceptFlatDesign600Nw2002387010Webp);
 function CourseCard(props) {
-    const { avg_rating, id, image_480x270 } = props.course;
+    console.log(props);
+    const { avg_rating, id, image_480x270, headline } = props.course;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
@@ -27641,6 +27650,13 @@ function CourseCard(props) {
                 fileName: "CourseCard.js",
                 lineNumber: 9,
                 columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: headline
+            }, void 0, false, {
+                fileName: "CourseCard.js",
+                lineNumber: 10,
+                columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
@@ -27658,10 +27674,7 @@ $RefreshReg$(_c, "CourseCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Assets/enrolled-successfully-concept-flat-design-600nw-2002387010.webp":"drNfw"}],"drNfw":[function(require,module,exports) {
-module.exports = require("14709929552e79fa").getBundleURL("lly8x") + "enrolled-successfully-concept-flat-design-600nw-2002387010.f6c1a059.webp" + "?" + Date.now();
-
-},{"14709929552e79fa":"lgJ39"}],"5QOAR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5QOAR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "courseData", ()=>courseData);

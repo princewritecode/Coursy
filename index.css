@@ -15,26 +15,50 @@ body {
 }
 ul > li {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 .card {
   max-width: 30%;
+  cursor: pointer;
   height: auto;
-  border: 1px solid black;
   padding: 1rem;
-  background-color: lightgray;
+  background-color: whitesmoke; /* Soft gray */
   margin-top: 2rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
 }
+
+.card:hover {
+  transform: translateY(-0.5rem); /* Slight lift on hover */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.card h3 {
+  color: #333; /* Darker text */
+  margin-bottom: 0.5rem; /* Spacing between title and course */
+}
+
+.card h4 {
+  color: #666; /* Softer text */
+  margin-bottom: 1rem; /* Spacing between courses */
+}
+
 .card img {
   width: 100%;
 }
 .search {
   padding: 10px;
 }
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.cart-img {
+  width: 30px;
+  height: 30px;
 }
