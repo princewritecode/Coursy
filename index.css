@@ -3,7 +3,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-
 #nav {
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,6 @@ body {
   display: flex;
   gap: 2rem;
   justify-content: flex-end;
-
   align-items: center;
 }
 ul > li {
@@ -32,28 +30,36 @@ ul > li {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
 }
-
 .card:hover {
   transform: translateY(-0.5rem); /* Slight lift on hover */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
   background-color: lightgray;
 }
-
 .card h3 {
   color: #333; /* Darker text */
   margin-bottom: 0.5rem; /* Spacing between title and course */
 }
-
 .card h4 {
   color: #666; /* Softer text */
   margin-bottom: 1rem; /* Spacing between courses */
 }
-
 .card img {
   width: 100%;
 }
-.search {
-  padding: 10px;
+.filter-btn {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.filter-btn:hover {
+  background-color: darkgreen; /* Darker Green on hover */
 }
 .container {
   display: flex;

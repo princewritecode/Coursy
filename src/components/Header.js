@@ -1,5 +1,5 @@
-import logo from './Assets/icons8-code-50.png';
-import cart from './Assets/icons8-cart-50.png';
+import logo from '../../Assets/icons8-code-50.png';
+import cart from '../../Assets/icons8-cart-50.png';
 export function Header()
 {
     return (
