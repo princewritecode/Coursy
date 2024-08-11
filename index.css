@@ -59,7 +59,7 @@ ul > li {
   border-radius: 4px;
 }
 .filter-btn:hover {
-  background-color: darkgreen; /* Darker Green on hover */
+  background-color: da; /* Darker Green on hover */
 }
 .container {
   display: flex;
@@ -95,4 +95,21 @@ a {
 }
 .info-headline {
   font-weight: 300;
+}
+.shimmerCard {
+  width: 30%;
+  cursor: pointer;
+  height: 300px;
+  padding: 1rem;
+  background-color: whitesmoke; /* Soft gray */
+  margin-top: 2rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+.shimmerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

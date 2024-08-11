@@ -1,7 +1,7 @@
 import { CourseCard } from "./CourseCard";
 import { courseData } from "../../utils/courseData";
 import { useState, useEffect } from "react";
-
+import { Shimmer } from "./Shimmer";
 export function Body()
 {
     const [course, setCourse] = useState([]);
@@ -17,13 +17,9 @@ export function Body()
         console.log(course);
     };
 
-    if (course.length === 0)
-    {
-        return <h1>Loading...</h1>;
-    }
 
     return (
-        <div className="body">
+        course.length === 0 ? <Shimmer></Shimmer> : <div className="body">
             <div className="filter">
                 <button onClick={() =>
                 {

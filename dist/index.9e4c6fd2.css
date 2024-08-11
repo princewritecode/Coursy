@@ -69,7 +69,7 @@ ul > li {
 }
 
 .filter-btn:hover {
-  background-color: #006400;
+  background-color: da;
 }
 
 .container {
@@ -111,5 +111,24 @@ a {
 
 .info-headline {
   font-weight: 300;
+}
+
+.shimmerCard {
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-radius: .5rem;
+  width: 30%;
+  height: 300px;
+  margin-top: 2rem;
+  padding: 1rem;
+  box-shadow: 0 .5rem 1rem #0000001a;
+}
+
+.shimmerContainer {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
