@@ -47,7 +47,7 @@ ul > li {
   width: 100%;
 }
 .filter-btn {
-  background-color: #4caf50; /* Green */
+  background-color: gray; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -59,7 +59,7 @@ ul > li {
   border-radius: 4px;
 }
 .filter-btn:hover {
-  background-color: da; /* Darker Green on hover */
+  background-color: darkgray; /* Darker Green on hover */
 }
 .container {
   display: flex;
@@ -112,4 +112,27 @@ a {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.search-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }

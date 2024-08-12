@@ -1,6 +1,5 @@
 export function CourseCard(props)
 {
-    console.log(props);
     const { avg_rating, id, url, image_480x270, headline, published_title
     } = props.course;
     return (

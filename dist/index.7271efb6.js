@@ -27568,41 +27568,84 @@ var _s = $RefreshSig$();
 function Body() {
     _s();
     const [course, setCourse] = (0, _react.useState)([]);
+    const [searchText, setsearch] = (0, _react.useState)("");
+    const [origCourse, setOrigcourse] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
         const data = await fetch("https://www.udemy.com/api-2.0/discovery-units/?context=personalized_home&from=0&page_size=6&item_count=18&source_page=logged_out_homepage&locale=en_US&navigation_locale=en&skip_price=true");
         const awaitData = await data.json();
+        setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
-        console.log(course);
     };
     return course.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 22,
+        lineNumber: 23,
         columnNumber: 31
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "filter",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    onClick: ()=>{
-                        const filtercourse = course.filter((item)=>{
-                            return item.avg_rating.toFixed(1) > 4.6;
-                        });
-                        setCourse(filtercourse);
-                    },
-                    className: "filter-btn",
-                    children: "Top Rated Course"
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 24,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "search",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                placeholder: "Search Course",
+                                type: "text",
+                                className: "search-box",
+                                value: searchText,
+                                onChange: (e)=>{
+                                    setsearch(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 26,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "search-btn",
+                                onClick: ()=>{
+                                    //filter card and update the ui
+                                    const filteredCourse = origCourse.filter((elem)=>{
+                                        return elem.title.toLowerCase().includes(searchText.toLowerCase());
+                                    });
+                                    console.log(filteredCourse);
+                                    setCourse(filteredCourse);
+                                },
+                                children: "Search"
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 30,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 25,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>{
+                            console.log("clicked");
+                            const filtercourse = course.filter((item)=>{
+                                return item.avg_rating.toFixed(1) > 4.6;
+                            });
+                            setCourse(filtercourse);
+                        },
+                        className: "filter-btn",
+                        children: "Top Rated Course"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 44,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27612,23 +27655,23 @@ function Body() {
                         course: items
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 37,
+                        lineNumber: 58,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 33,
+                lineNumber: 54,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 22,
+        lineNumber: 23,
         columnNumber: 53
     }, this);
 }
-_s(Body, "bZPxNyBYxZTtkzWZj71lalmyU5g=");
+_s(Body, "ObFdlmvfbJtl3wCeS+OCq8O7hI4=");
 _c = Body;
 var _c;
 $RefreshReg$(_c, "Body");
@@ -27652,7 +27695,6 @@ parcelHelpers.export(exports, "CourseCard", ()=>CourseCard) //https://www.udemy.
 ;
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function CourseCard(props) {
-    console.log(props);
     const { avg_rating, id, url, image_480x270, headline, published_title } = props.course;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
@@ -27661,7 +27703,7 @@ function CourseCard(props) {
                 src: image_480x270
             }, void 0, false, {
                 fileName: "src/components/CourseCard.js",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -27671,7 +27713,7 @@ function CourseCard(props) {
                 ]
             }, void 0, true, {
                 fileName: "src/components/CourseCard.js",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27681,7 +27723,7 @@ function CourseCard(props) {
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/CourseCard.js",
-                        lineNumber: 10,
+                        lineNumber: 9,
                         columnNumber: 16
                     }, this),
                     "  - ",
@@ -27689,7 +27731,7 @@ function CourseCard(props) {
                 ]
             }, void 0, true, {
                 fileName: "src/components/CourseCard.js",
-                lineNumber: 10,
+                lineNumber: 9,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27700,14 +27742,14 @@ function CourseCard(props) {
                         children: "Course Information - "
                     }, void 0, false, {
                         fileName: "src/components/CourseCard.js",
-                        lineNumber: 11,
+                        lineNumber: 10,
                         columnNumber: 42
                     }, this),
                     headline
                 ]
             }, void 0, true, {
                 fileName: "src/components/CourseCard.js",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27718,18 +27760,18 @@ function CourseCard(props) {
                     children: "Check Out This Course"
                 }, void 0, false, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 12,
+                    lineNumber: 11,
                     columnNumber: 37
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/CourseCard.js",
-                lineNumber: 12,
+                lineNumber: 11,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/CourseCard.js",
-        lineNumber: 7,
+        lineNumber: 6,
         columnNumber: 9
     }, this);
 }
