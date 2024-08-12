@@ -2,6 +2,7 @@ import { CourseCard } from "./CourseCard";
 import { courseData } from "../../utils/courseData";
 import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
+import { Link } from "react-router-dom";
 export function Body()
 {
     const [course, setCourse] = useState([]);
@@ -55,7 +56,7 @@ export function Body()
                 {
                     course.map((items) =>
                     {
-                        return <CourseCard key={items.id} course={items}></CourseCard>;
+                        return <Link key={items.id} to={'/course/' + items.id}><CourseCard course={items}></CourseCard></Link>;
                     })
                 }
             </div>

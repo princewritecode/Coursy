@@ -3,6 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
 #nav {
   display: flex;
   justify-content: space-between;
@@ -78,7 +79,6 @@ ul > li {
 }
 a {
   text-decoration: none;
-  color: white;
 }
 #course-btn {
   background-color: #4caf50; /* Green */
