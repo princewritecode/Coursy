@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RoadmapCard } from "./RoadmapCard";
 export const Roadmap = () =>
 {
     const [roadmap, setRoadmap] = useState([]);
@@ -18,9 +19,19 @@ export const Roadmap = () =>
         const data = await fetch('https://roadmap.sh/pages.json');
         const dataJson = await data.json();
         console.log(dataJson);
+        setRoadmap(dataJson);
     };
-    return (<>
-        <h1>Welcome to roadmap</h1>
-    </>);
+
+    return roadmap.length !== 0 ? (
+        <div>
+            {
+                roadmap.map(
+                    (roadmap) =>
+                    {
+                        return (<RoadmapCard roadData={roadmap}></RoadmapCard>);
+                    })
+            }
+        </div>
+    ) : <h1>Loading...</h1>;
 };
 

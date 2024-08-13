@@ -2991,7 +2991,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 24,
+            lineNumber: 23,
             columnNumber: 22
         }, undefined),
         children: [
@@ -2999,7 +2999,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _body.Body), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 28,
+                    lineNumber: 27,
                     columnNumber: 30
                 }, undefined)
             },
@@ -3007,7 +3007,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _about.About), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 32,
+                    lineNumber: 31,
                     columnNumber: 30
                 }, undefined)
             },
@@ -3015,7 +3015,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/course/:courseid",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseinfo.Courseinfo), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 36,
+                    lineNumber: 35,
                     columnNumber: 30
                 }, undefined)
             },
@@ -3023,14 +3023,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/roadmap",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmap.Roadmap), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 40,
+                    lineNumber: 39,
                     columnNumber: 30
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _error.Error), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 42,
+            lineNumber: 41,
             columnNumber: 30
         }, undefined)
     }
@@ -3040,7 +3040,7 @@ rootElem.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Rou
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 47,
+    lineNumber: 46,
     columnNumber: 17
 }, undefined));
 var _c;
@@ -37184,6 +37184,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Roadmap", ()=>Roadmap);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _roadmapCard = require("./RoadmapCard");
 var _s = $RefreshSig$();
 const Roadmap = ()=>{
     _s();
@@ -37199,16 +37200,29 @@ const Roadmap = ()=>{
         const data = await fetch("https://roadmap.sh/pages.json");
         const dataJson = await data.json();
         console.log(dataJson);
+        setRoadmap(dataJson);
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Welcome to roadmap"
-        }, void 0, false, {
-            fileName: "src/components/Roadmap.js",
-            lineNumber: 23,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false);
+    return roadmap.length !== 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: roadmap.map((roadmap)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmapCard.RoadmapCard), {
+                roadData: roadmap
+            }, void 0, false, {
+                fileName: "src/components/Roadmap.js",
+                lineNumber: 31,
+                columnNumber: 33
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/Roadmap.js",
+        lineNumber: 26,
+        columnNumber: 9
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Loading..."
+    }, void 0, false, {
+        fileName: "src/components/Roadmap.js",
+        lineNumber: 35,
+        columnNumber: 9
+    }, undefined);
 };
 _s(Roadmap, "da6Mox6a0oRmUJLcOVj1REDnR2I=");
 _c = Roadmap;
@@ -37220,6 +37234,42 @@ $RefreshReg$(_c, "Roadmap");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiredc33")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RoadmapCard":"a9O1K"}],"a9O1K":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1995 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1995.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "RoadmapCard", ()=>RoadmapCard);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RoadmapCard = (props)=>{
+    console.log(props);
+    return props.roadData ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: props.roadData.id
+    }, void 0, false, {
+        fileName: "src/components/RoadmapCard.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Loading"
+    }, void 0, false, {
+        fileName: "src/components/RoadmapCard.js",
+        lineNumber: 5,
+        columnNumber: 41
+    }, undefined);
+};
+_c = RoadmapCard;
+var _c;
+$RefreshReg$(_c, "RoadmapCard");
+
+  $parcel$ReactRefreshHelpers$1995.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiredc33")
 
 //# sourceMappingURL=index.7271efb6.js.map
