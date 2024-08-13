@@ -6,6 +6,7 @@ import { About } from "./components/About";
 import { Error } from "./components/Error";
 import { Courseinfo } from "./components/Courseinfo";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Roadmap } from "./components/Roadmap";
 function AppLayout()
 {
     return (
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter(
                 {
                     path: '/course/:courseid',
                     element: <Courseinfo></Courseinfo>
+                },
+                {
+                    path: '/roadmap',
+                    element: <Roadmap></Roadmap>
                 }
             ], errorElement: <Error></Error>
         }

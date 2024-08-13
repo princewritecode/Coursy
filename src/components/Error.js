@@ -5,7 +5,7 @@ export const Error = () =>
     console.log(err);
     return (
         <div>
-            <h1>{err.error.message + ' ' + 'Status' + ' ' + err.status}</h1>
+            <h1>{err}</h1>
         </div>
     );
 };
