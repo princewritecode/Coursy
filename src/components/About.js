@@ -1,28 +1,20 @@
 import React from "react";
+import { User } from './Userclass';
+import { User2 } from './userclass2';
 export class About extends React.Component
 {
     constructor(props)
     {
         super(props);
-        console.log(props);
-        console.log(this);
-        this.state = {
-            count: 0
-        };
     }
+
     render()
     {
-        const { count } = this.state;
         return (
             <div>
-                <h1>{count}</h1>
-                <button onClick={() =>
-                {
-                    this.setState({
-                        count: count + 1
-                    });
-                }}>+</button>
+                <User></User>
             </div>
         );
-    };
-}
+    }
+};
+

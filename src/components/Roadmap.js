@@ -21,7 +21,6 @@ export const Roadmap = () =>
         console.log(dataJson);
         setRoadmap(dataJson);
     };
-
     return roadmap.length !== 0 ? (
         <div>
             {
