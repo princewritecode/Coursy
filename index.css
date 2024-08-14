@@ -20,6 +20,7 @@ ul > li {
   display: flex;
   align-items: center;
 }
+
 .card {
   max-width: 30%;
   cursor: pointer;

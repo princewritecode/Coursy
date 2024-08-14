@@ -28,7 +28,7 @@ const appRouter = createBrowserRouter(
                 },
                 {
                     path: '/about',
-                    element: <About></About>
+                    element: <About user="prince" course="react"></About>
                 },
                 {
                     path: '/course/:courseid',

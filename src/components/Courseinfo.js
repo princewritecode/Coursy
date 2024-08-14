@@ -5,7 +5,6 @@ export const Courseinfo = () =>
 
     const [courseInfo, setcourseinfo] = useState([]);
     const { courseid } = useParams();
-
     useEffect(() =>
     {
         console.log('useeffect run');

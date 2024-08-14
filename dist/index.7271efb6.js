@@ -3005,7 +3005,10 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             },
             {
                 path: "/about",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _about.About), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _about.About), {
+                    user: "prince",
+                    course: "react"
+                }, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 31,
                     columnNumber: 30
@@ -37007,31 +37010,55 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "About", ()=>About);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Hello from about us page"
-        }, void 0, false, {
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class About extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        console.log(props);
+        console.log(this);
+        this.state = {
+            count: 0
+        };
+    }
+    render() {
+        const { count } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: count
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 18,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count: count + 1
+                        });
+                    },
+                    children: "+"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 19,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "src/components/About.js",
-            lineNumber: 4,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/About.js",
-        lineNumber: 3,
-        columnNumber: 13
-    }, undefined);
-};
-_c = About;
-var _c;
-$RefreshReg$(_c, "About");
+            lineNumber: 17,
+            columnNumber: 13
+        }, this);
+    }
+}
 
   $parcel$ReactRefreshHelpers$5b98.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"kvula":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37115,14 +37142,14 @@ const Courseinfo = ()=>{
                 src: courseInfo.visible_instructors[0].image_100x100
             }, void 0, false, {
                 fileName: "src/components/Courseinfo.js",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: courseInfo.context_info.category.title
             }, void 0, false, {
                 fileName: "src/components/Courseinfo.js",
-                lineNumber: 32,
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -37131,30 +37158,30 @@ const Courseinfo = ()=>{
                         children: courseInfo.context_info.category.id
                     }, void 0, false, {
                         fileName: "src/components/Courseinfo.js",
-                        lineNumber: 34,
+                        lineNumber: 33,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {}, void 0, false, {
                         fileName: "src/components/Courseinfo.js",
-                        lineNumber: 35,
+                        lineNumber: 34,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Courseinfo.js",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Courseinfo.js",
-        lineNumber: 29,
+        lineNumber: 28,
         columnNumber: 9
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Loading..."
     }, void 0, false, {
         fileName: "src/components/Courseinfo.js",
-        lineNumber: 38,
+        lineNumber: 37,
         columnNumber: 9
     }, undefined);
 };

@@ -1,6 +1,28 @@
-export const About = () =>
+import React from "react";
+export class About extends React.Component
 {
-    return (<div>
-        <h1>Hello from about us page</h1>
-    </div>);
-};
+    constructor(props)
+    {
+        super(props);
+        console.log(props);
+        console.log(this);
+        this.state = {
+            count: 0
+        };
+    }
+    render()
+    {
+        const { count } = this.state;
+        return (
+            <div>
+                <h1>{count}</h1>
+                <button onClick={() =>
+                {
+                    this.setState({
+                        count: count + 1
+                    });
+                }}>+</button>
+            </div>
+        );
+    };
+}
