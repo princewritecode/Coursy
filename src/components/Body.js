@@ -3,6 +3,7 @@ import { courseData } from "../../utils/courseData";
 import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
+import { useOnlineStatus } from "../../utils/useOnlineStatus";
 export function Body()
 {
     const [course, setCourse] = useState([]);
@@ -19,6 +20,16 @@ export function Body()
         setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
     };
+    const onlineStatus = useOnlineStatus();
+    if (onlineStatus === false)
+    {
+        return (
+            <h1>
+                Check your internet connection
+            </h1>
+        );
+    }
+
     return (
         course.length === 0 ? <Shimmer></Shimmer> : <div className="body">
             <div className="filter">

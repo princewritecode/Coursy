@@ -34772,6 +34772,7 @@ var _courseData = require("../../utils/courseData");
 var _react = require("react");
 var _shimmer = require("./Shimmer");
 var _reactRouterDom = require("react-router-dom");
+var _useOnlineStatus = require("../../utils/useOnlineStatus");
 var _s = $RefreshSig$();
 function Body() {
     _s();
@@ -34787,9 +34788,17 @@ function Body() {
         setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
     };
+    const onlineStatus = (0, _useOnlineStatus.useOnlineStatus)();
+    if (onlineStatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Check your internet connection"
+    }, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 27,
+        columnNumber: 13
+    }, this);
     return course.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 23,
+        lineNumber: 34,
         columnNumber: 31
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -34810,7 +34819,7 @@ function Body() {
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 26,
+                                lineNumber: 37,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34826,13 +34835,13 @@ function Body() {
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 30,
+                                lineNumber: 41,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 25,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34847,13 +34856,13 @@ function Body() {
                         children: "Top Rated Course"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 44,
+                        lineNumber: 55,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 24,
+                lineNumber: 35,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34865,28 +34874,32 @@ function Body() {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 58,
+                            lineNumber: 69,
                             columnNumber: 80
                         }, this)
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 58,
+                        lineNumber: 69,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 54,
+                lineNumber: 65,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 23,
+        lineNumber: 34,
         columnNumber: 53
     }, this);
 }
-_s(Body, "ObFdlmvfbJtl3wCeS+OCq8O7hI4=");
+_s(Body, "vveRrg7nyas8yoLTdF+/kjmwNWk=", false, function() {
+    return [
+        (0, _useOnlineStatus.useOnlineStatus)
+    ];
+});
 _c = Body;
 var _c;
 $RefreshReg$(_c, "Body");
@@ -34896,7 +34909,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./CourseCard":"9mEe7","../../utils/courseData":"3cWtu","react":"21dqq","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9mEe7":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./CourseCard":"9mEe7","../../utils/courseData":"3cWtu","react":"21dqq","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../utils/useOnlineStatus":"jC9jl"}],"9mEe7":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cdcc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36999,7 +37012,39 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jC9jl":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3a99 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3a99.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useOnlineStatus", ()=>useOnlineStatus);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useOnlineStatus = ()=>{
+    _s();
+    const [onlineStatus, setOnlineStatus] = (0, _react.useState)(true);
+    (0, _react.useEffect)(()=>{
+        window.addEventListener("offline", ()=>{
+            setOnlineStatus(false);
+        });
+        window.addEventListener("online", ()=>{
+            setOnlineStatus(true);
+        });
+    }, []);
+    return onlineStatus;
+};
+_s(useOnlineStatus, "qDLN4CKTUyO1Uktrrx41NP8Q2H4=");
+
+  $parcel$ReactRefreshHelpers$3a99.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37323,46 +37368,41 @@ parcelHelpers.export(exports, "Roadmap", ()=>Roadmap);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _roadmapCard = require("./RoadmapCard");
+var _useRoadmap = require("../../utils/useRoadmap");
 var _s = $RefreshSig$();
 const Roadmap = ()=>{
     _s();
-    const [roadmap, setRoadmap] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        try {
-            fetchRoadmap();
-        } catch (err) {
-            console.log(err);
-        }
-    }, []);
-    const fetchRoadmap = async ()=>{
-        const data = await fetch("https://roadmap.sh/pages.json");
-        const dataJson = await data.json();
-        console.log(dataJson);
-        setRoadmap(dataJson);
-    };
+    const roadmap = (0, _useRoadmap.useRoadmap)();
     return roadmap.length !== 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: roadmap.map((roadmap)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmapCard.RoadmapCard), {
-                roadData: roadmap
-            }, void 0, false, {
-                fileName: "src/components/Roadmap.js",
-                lineNumber: 30,
-                columnNumber: 33
-            }, undefined);
-        })
-    }, void 0, false, {
+        children: [
+            console.log("inside roadmap"),
+            roadmap.map((roadmap)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmapCard.RoadmapCard), {
+                    roadData: roadmap
+                }, void 0, false, {
+                    fileName: "src/components/Roadmap.js",
+                    lineNumber: 14,
+                    columnNumber: 33
+                }, undefined);
+            })
+        ]
+    }, void 0, true, {
         fileName: "src/components/Roadmap.js",
-        lineNumber: 25,
+        lineNumber: 8,
         columnNumber: 9
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Loading..."
     }, void 0, false, {
         fileName: "src/components/Roadmap.js",
-        lineNumber: 34,
+        lineNumber: 18,
         columnNumber: 9
     }, undefined);
 };
-_s(Roadmap, "da6Mox6a0oRmUJLcOVj1REDnR2I=");
+_s(Roadmap, "wmZnYGOuXn5oQUJmdTFVOHrr3kQ=", false, function() {
+    return [
+        (0, _useRoadmap.useRoadmap)
+    ];
+});
 _c = Roadmap;
 var _c;
 $RefreshReg$(_c, "Roadmap");
@@ -37372,7 +37412,7 @@ $RefreshReg$(_c, "Roadmap");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RoadmapCard":"a9O1K"}],"a9O1K":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RoadmapCard":"a9O1K","../../utils/useRoadmap":"hJbKq"}],"a9O1K":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1995 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37408,6 +37448,44 @@ $RefreshReg$(_c, "RoadmapCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiredc33")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hJbKq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$dd7f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$dd7f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useRoadmap", ()=>useRoadmap);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useRoadmap = ()=>{
+    _s();
+    console.log("inside roadmap hook");
+    const [roadmap, setRoadmap] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        try {
+            fetchRoadmap();
+        } catch (err) {
+            console.log(err);
+        }
+    }, []);
+    const fetchRoadmap = async ()=>{
+        const data = await fetch("https://roadmap.sh/pages.json");
+        const dataJson = await data.json();
+        console.log(dataJson);
+        setRoadmap(dataJson);
+    };
+    return roadmap;
+};
+_s(useRoadmap, "da6Mox6a0oRmUJLcOVj1REDnR2I=");
+
+  $parcel$ReactRefreshHelpers$dd7f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiredc33")
 
 //# sourceMappingURL=index.7271efb6.js.map
