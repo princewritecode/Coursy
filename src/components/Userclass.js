@@ -29,13 +29,18 @@ export class User extends React.Component
     };
     render()
     {
-        const { name, id, avatar_url } = this.state.userInfo;
+        const { name, id, avatar_url, bio, url } = this.state.userInfo;
         return (
             <>
-                <h1>
-                    {name}
-                </h1>
-                <p>{id}</p>
+
+                <div className="flex flex-col items-center gap-4">
+                    <img className="w-48" src={avatar_url}></img>
+                    <h1>
+                        {name}
+                    </h1>
+                    <p>{bio}</p>
+                    <a className="py-2 px-4 border rounded-md my-2 bg-green-300" href='https://my-portfolio-ten-self.vercel.app/'><button>My Work</button></a>
+                </div>
             </>
         );
     }

@@ -16,5 +16,4 @@ const Roadmap = () =>
         </div>
     ) : <h1>Loading...</h1>;
 };
-
 export default Roadmap;

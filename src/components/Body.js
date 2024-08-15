@@ -22,7 +22,7 @@ export function Body()
     };
 
     const onlineStatus = useOnlineStatus();
-
+    console.log(course);
     if (onlineStatus === false)
     {
         return (
@@ -35,12 +35,12 @@ export function Body()
     return (
         course.length === 0 ? <Shimmer></Shimmer> : <div className="body">
             <div className="filter">
-                <div className="search">
-                    <input placeholder="Search Course" type="text" className="search-box" value={searchText} onChange={(e) =>
+                <div className="m-4 p-4 ">
+                    <input placeholder="Search Course" type="text" className="border rounded-md w-80 border-solid border-black" value={searchText} onChange={(e) =>
                     {
                         setsearch(e.target.value);
                     }}></input>
-                    <button className="search-btn" onClick={
+                    <button className="mx-4 px-4 py-1 bg-green-300 rounded-lg hover:bg-green-400" onClick={
                         () =>
                         {
                             //filter card and update the ui
@@ -53,18 +53,20 @@ export function Body()
                             console.log(filteredCourse);
                             setCourse(filteredCourse);
                         }}>Search</button>
-                </div>
-                <button onClick={() =>
-                {
-                    console.log('clicked');
-                    const filtercourse = course.filter((item) =>
+
+                    <button onClick={() =>
                     {
-                        return item.avg_rating.toFixed(1) > 4.6;
-                    });
-                    setCourse(filtercourse);
-                }} className="filter-btn">Top Rated Course</button>
+                        console.log('clicked');
+                        const filtercourse = course.filter((item) =>
+                        {
+                            return item.avg_rating.toFixed(1) > 4.6;
+                        });
+                        setCourse(filtercourse);
+                    }} className="px-4 py-1 mx-4 bg-gray-200 rounded-lg hover:bg-gray-300">Top Rated Course</button>
+                </div>
+
             </div>
-            <div className="container">
+            <div className="flex flex-wrap justify-center ">
                 {
                     course.map((items) =>
                     {

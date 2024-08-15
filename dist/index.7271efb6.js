@@ -27330,10 +27330,10 @@ var _icons8Cart50PngDefault = parcelHelpers.interopDefault(_icons8Cart50Png);
 var _reactRouterDom = require("react-router-dom");
 function Header() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "nav",
+        className: "flex justify-between shadow-md",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "logo",
+                className: "p-4 m-4",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: (0, _icons8Code50PngDefault.default)
                 }, void 0, false, {
@@ -27347,17 +27347,19 @@ function Header() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "nav-items",
+                className: "flex items-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "flex p-4 m-4",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-4  mx-4 hover:bg-gray-200 bg-gray-100 border rounded-md",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 14,
-                                columnNumber: 25
+                                columnNumber: 96
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
@@ -27365,13 +27367,14 @@ function Header() {
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-4 mx-4   hover:bg-gray-200 bg-gray-100 border rounded-md",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/about",
-                                children: "About"
+                                to: "/roadmap",
+                                children: "Roadmap"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 15,
-                                columnNumber: 25
+                                columnNumber: 97
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
@@ -27379,13 +27382,14 @@ function Header() {
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-4  mx-4  hover:bg-gray-200 bg-gray-100 border rounded-md",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/roadmap",
-                                children: "Roadmap"
+                                to: "/about",
+                                children: "About"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 16,
-                                columnNumber: 25
+                                columnNumber: 97
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
@@ -27393,12 +27397,13 @@ function Header() {
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "px-4  mx-4    hover:bg-gray-200 bg-gray-100 border rounded-md",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 children: "Cart"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 17,
-                                columnNumber: 25
+                                columnNumber: 99
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
@@ -34804,6 +34809,7 @@ function Body() {
         setCourse(awaitData.units[0].items);
     };
     const onlineStatus = (0, _useOnlineStatus.useOnlineStatus)();
+    console.log(course);
     if (onlineStatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Check your internet connection"
     }, void 0, false, {
@@ -34820,68 +34826,66 @@ function Body() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "filter",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "search",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                placeholder: "Search Course",
-                                type: "text",
-                                className: "search-box",
-                                value: searchText,
-                                onChange: (e)=>{
-                                    setsearch(e.target.value);
-                                }
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 39,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "search-btn",
-                                onClick: ()=>{
-                                    //filter card and update the ui
-                                    const filteredCourse = origCourse.filter((elem)=>{
-                                        return elem.title.toLowerCase().includes(searchText.toLowerCase());
-                                    });
-                                    console.log(filteredCourse);
-                                    setCourse(filteredCourse);
-                                },
-                                children: "Search"
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 43,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 38,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>{
-                            console.log("clicked");
-                            const filtercourse = course.filter((item)=>{
-                                return item.avg_rating.toFixed(1) > 4.6;
-                            });
-                            setCourse(filtercourse);
-                        },
-                        className: "filter-btn",
-                        children: "Top Rated Course"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 57,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "m-4 p-4 ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            placeholder: "Search Course",
+                            type: "text",
+                            className: "border rounded-md w-80 border-solid border-black",
+                            value: searchText,
+                            onChange: (e)=>{
+                                setsearch(e.target.value);
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 39,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "mx-4 px-4 py-1 bg-green-300 rounded-lg hover:bg-green-400",
+                            onClick: ()=>{
+                                //filter card and update the ui
+                                const filteredCourse = origCourse.filter((elem)=>{
+                                    return elem.title.toLowerCase().includes(searchText.toLowerCase());
+                                });
+                                console.log(filteredCourse);
+                                setCourse(filteredCourse);
+                            },
+                            children: "Search"
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 43,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            onClick: ()=>{
+                                console.log("clicked");
+                                const filtercourse = course.filter((item)=>{
+                                    return item.avg_rating.toFixed(1) > 4.6;
+                                });
+                                setCourse(filtercourse);
+                            },
+                            className: "px-4 py-1 mx-4 bg-gray-200 rounded-lg hover:bg-gray-300",
+                            children: "Top Rated Course"
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 57,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 38,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
                 fileName: "src/components/Body.js",
                 lineNumber: 37,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "container",
+                className: "flex flex-wrap justify-center ",
                 children: course.map((items)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/course/" + items.id,
@@ -34889,18 +34893,18 @@ function Body() {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 71,
+                            lineNumber: 73,
                             columnNumber: 80
                         }, this)
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 71,
+                        lineNumber: 73,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 67,
+                lineNumber: 69,
                 columnNumber: 13
             }, this)
         ]
@@ -34935,73 +34939,84 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CourseCard", ()=>CourseCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _courseCard = require("./CourseCard");
+var _courseData = require("../../utils/courseData");
+var _react = require("react");
+var _shimmer = require("./Shimmer");
 var _reactRouterDom = require("react-router-dom");
+var _useOnlineStatus = require("../../utils/useOnlineStatus");
 function CourseCard(props) {
     const { avg_rating, id, url, image_480x270, headline, published_title } = props.course;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: image_480x270
-            }, void 0, false, {
-                fileName: "src/components/CourseCard.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: [
-                    "Rating ",
-                    avg_rating.toFixed(1) + " \u2B50\uFE0F"
-                ]
-            }, void 0, true, {
-                fileName: "src/components/CourseCard.js",
-                lineNumber: 9,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "title",
-                        children: "Title"
-                    }, void 0, false, {
-                        fileName: "src/components/CourseCard.js",
-                        lineNumber: 10,
-                        columnNumber: 16
-                    }, this),
-                    "  - ",
-                    published_title.toUpperCase()
-                ]
-            }, void 0, true, {
-                fileName: "src/components/CourseCard.js",
-                lineNumber: 10,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "info-headline",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "title",
-                        children: "Course Information - "
-                    }, void 0, false, {
-                        fileName: "src/components/CourseCard.js",
-                        lineNumber: 11,
-                        columnNumber: 42
-                    }, this),
-                    headline
-                ]
-            }, void 0, true, {
-                fileName: "src/components/CourseCard.js",
-                lineNumber: 11,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/CourseCard.js",
-        lineNumber: 7,
-        columnNumber: 9
-    }, this);
+    console.log(url);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-col justify-center p-4 m-4 w-[250px] bg-gray-100 border rounded-md h-[500px] hover:bg-slate-200",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: image_480x270,
+                    className: "border rounded-md "
+                }, void 0, false, {
+                    fileName: "src/components/CourseCard.js",
+                    lineNumber: 15,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    className: "font-bold py-4 text-lg m-2",
+                    children: [
+                        "Rating ",
+                        avg_rating.toFixed(1) + " \u2B50\uFE0F"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/CourseCard.js",
+                    lineNumber: 16,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "font-bold ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold",
+                            children: "Title"
+                        }, void 0, false, {
+                            fileName: "src/components/CourseCard.js",
+                            lineNumber: 17,
+                            columnNumber: 43
+                        }, this),
+                        "  - ",
+                        published_title.toUpperCase()
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/CourseCard.js",
+                    lineNumber: 17,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "info-headline my-2",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "title",
+                            children: "Course Information - "
+                        }, void 0, false, {
+                            fileName: "src/components/CourseCard.js",
+                            lineNumber: 18,
+                            columnNumber: 51
+                        }, this),
+                        headline
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/CourseCard.js",
+                    lineNumber: 18,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/CourseCard.js",
+            lineNumber: 14,
+            columnNumber: 13
+        }, this)
+    }, void 0, false);
 }
-_c = CourseCard;
+_c = (0, _courseCard.CourseCard);
 var _c;
 $RefreshReg$(_c, "CourseCard");
 
@@ -35010,7 +35025,7 @@ $RefreshReg$(_c, "CourseCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3cWtu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CourseCard":"9mEe7","../../utils/courseData":"3cWtu","react":"21dqq","./Shimmer":"g6ZGj","../../utils/useOnlineStatus":"jC9jl"}],"3cWtu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "courseData", ()=>courseData);
@@ -37073,32 +37088,104 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _userclass = require("./Userclass");
-var _userclass2 = require("./userclass2");
-class About extends (0, _reactDefault.default).Component {
-    constructor(props){
-        super(props);
-    }
-    render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userclass.User), {}, void 0, false, {
+function About() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                class: "text-gray-700 body-font m-4",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    class: "container mx-auto flex flex-col items-center",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "lg:w-2/3 flex flex-col items-center text-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                class: "text-gray-900 text-3xl title-font font-medium mb-4",
+                                children: "Our Vision"
+                            }, void 0, false, {
+                                fileName: "src/components/About.js",
+                                lineNumber: 12,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                class: "mb-8 leading-relaxed",
+                                children: "We aim to empower aspiring developers by providing a platform that simplifies the journey to mastering coding. Our platform offers curated high-rated courses from Udemy, tailored roadmaps to guide learners, and a supportive community to foster growth. Whether you're a beginner taking your first steps or an experienced developer looking to expand your skill set, we're here to assist you in achieving your coding goals."
+                            }, void 0, false, {
+                                fileName: "src/components/About.js",
+                                lineNumber: 13,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About.js",
+                        lineNumber: 11,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 10,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
                 fileName: "src/components/About.js",
-                lineNumber: 15,
-                columnNumber: 17
+                lineNumber: 9,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center items-center min-h-screen",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "max-w-md bg-white rounded-lg shadow-md p-6",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-center",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-2xl font-bold text-gray-800",
+                                children: "About Me"
+                            }, void 0, false, {
+                                fileName: "src/components/About.js",
+                                lineNumber: 25,
+                                columnNumber: 25
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 23,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "mt-4",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userclass.User), {}, void 0, false, {
+                                fileName: "src/components/About.js",
+                                lineNumber: 28,
+                                columnNumber: 25
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 27,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 22,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 21,
+                columnNumber: 13
             }, this)
-        }, void 0, false, {
-            fileName: "src/components/About.js",
-            lineNumber: 14,
-            columnNumber: 13
-        }, this);
-    }
+        ]
+    }, void 0, true);
 }
+_c = About;
+var _c;
+$RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$5b98.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Userclass":"fFlGv","./userclass2":"e06P8"}],"fFlGv":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Userclass":"fFlGv"}],"fFlGv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f2d2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37135,68 +37222,59 @@ class User extends (0, _reactDefault.default).Component {
         });
     }
     render() {
-        const { name, id, avatar_url } = this.state.userInfo;
+        const { name, id, avatar_url, bio, url } = this.state.userInfo;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: name
-                }, void 0, false, {
-                    fileName: "src/components/Userclass.js",
-                    lineNumber: 35,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: id
-                }, void 0, false, {
-                    fileName: "src/components/Userclass.js",
-                    lineNumber: 38,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true);
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col items-center gap-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "w-48",
+                        src: avatar_url
+                    }, void 0, false, {
+                        fileName: "src/components/Userclass.js",
+                        lineNumber: 37,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/Userclass.js",
+                        lineNumber: 38,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: bio
+                    }, void 0, false, {
+                        fileName: "src/components/Userclass.js",
+                        lineNumber: 41,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        className: "py-2 px-4 border rounded-md my-2 bg-green-300",
+                        href: "https://my-portfolio-ten-self.vercel.app/",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            children: "My Work"
+                        }, void 0, false, {
+                            fileName: "src/components/Userclass.js",
+                            lineNumber: 42,
+                            columnNumber: 131
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/Userclass.js",
+                        lineNumber: 42,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Userclass.js",
+                lineNumber: 36,
+                columnNumber: 17
+            }, this)
+        }, void 0, false);
     }
 }
 
   $parcel$ReactRefreshHelpers$f2d2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"e06P8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5ec1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5ec1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "User2", ()=>User2);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-class User2 extends (0, _reactDefault.default).Component {
-    constructor(props){
-        super(props);
-        console.log(props);
-        console.log("child constructor of user2 class");
-    }
-    componentDidMount() {
-        console.log("component did mount is called child user 2");
-    }
-    render() {
-        console.log("chhild redner user 2");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Hello from class componet user2"
-        }, void 0, false, {
-            fileName: "src/components/userclass2.js",
-            lineNumber: 21,
-            columnNumber: 17
-        }, this);
-    }
-}
-
-  $parcel$ReactRefreshHelpers$5ec1.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -37267,35 +37345,72 @@ const Courseinfo = ()=>{
     const { courseid } = (0, _reactRouterDom.useParams)();
     const courseInfo = (0, _useCourse.useCourse)(courseid);
     console.log(courseInfo);
+    console.log(courseInfo);
     return courseInfo && courseInfo.context_info && courseInfo.context_info.category ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "course",
+        className: "my-10 w-[350px] bg-gray-100 h-[350px] flex flex-col items-center mx-auto border rounded-lg",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: courseInfo.visible_instructors[0].image_100x100
+                src: courseInfo.visible_instructors[0].image_100x100,
+                className: "w-[150px] h-[150px] my-4 border rounded-md"
             }, void 0, false, {
                 fileName: "src/components/Courseinfo.js",
                 lineNumber: 13,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: courseInfo.context_info.category.title
-            }, void 0, false, {
+                className: "font-bold",
+                children: [
+                    "category:  ",
+                    courseInfo.context_info.category.title
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Courseinfo.js",
                 lineNumber: 15,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                className: "flex flex-col items-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: courseInfo.context_info.category.id
+                        children: courseInfo.context_info.category.name
                     }, void 0, false, {
                         fileName: "src/components/Courseinfo.js",
                         lineNumber: 17,
                         columnNumber: 17
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "font-medium m-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "font-bold",
+                                children: "Instructor: "
+                            }, void 0, false, {
+                                fileName: "src/components/Courseinfo.js",
+                                lineNumber: 18,
+                                columnNumber: 49
+                            }, undefined),
+                            courseInfo.visible_instructors[0].display_name
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Courseinfo.js",
                         lineNumber: 18,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "font-bold",
+                                children: "Enrolled Students:"
+                            }, void 0, false, {
+                                fileName: "src/components/Courseinfo.js",
+                                lineNumber: 19,
+                                columnNumber: 21
+                            }, undefined),
+                            courseInfo.num_subscribers
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Courseinfo.js",
+                        lineNumber: 19,
                         columnNumber: 17
                     }, undefined)
                 ]
@@ -37313,7 +37428,7 @@ const Courseinfo = ()=>{
         children: "Loading..."
     }, void 0, false, {
         fileName: "src/components/Courseinfo.js",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 9
     }, undefined);
 };
