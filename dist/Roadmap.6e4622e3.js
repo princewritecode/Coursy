@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"3rjSQ":[function(require,module,exports) {
+})({"eOWYJ":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "e8f96b856bd8a7d8";
+module.bundle.HMR_BUNDLE_ID = "38f686566e4622e3";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,8 +583,157 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"7I0FO":[function(require,module,exports) {
+},{}],"1xC6H":[function(require,module,exports) {
+var Refresh = require("6d18d6bd340e7473");
+var ErrorOverlay = require("74ad5ea14201648c");
+Refresh.injectIntoGlobalHook(window);
+window.$RefreshReg$ = function() {};
+window.$RefreshSig$ = function() {
+    return function(type) {
+        return type;
+    };
+};
+ErrorOverlay.setEditorHandler(function editorHandler(errorLocation) {
+    let file = `${errorLocation.fileName}:${errorLocation.lineNumber || 1}:${errorLocation.colNumber || 1}`;
+    fetch(`/__parcel_launch_editor?file=${encodeURIComponent(file)}`);
+});
+ErrorOverlay.startReportingRuntimeErrors({
+    onError: function() {}
+});
+window.addEventListener("parcelhmraccept", ()=>{
+    ErrorOverlay.dismissRuntimeErrors();
+});
 
-},{}]},["3rjSQ","7I0FO"], "7I0FO", "parcelRequiredc33")
+},{"6d18d6bd340e7473":"786KC","74ad5ea14201648c":"1dldy"}],"8q1ll":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5bef = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5bef.prelude(module);
 
-//# sourceMappingURL=episode1.6bd8a7d8.js.map
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _roadmapCard = require("./RoadmapCard");
+var _useRoadmap = require("../../utils/useRoadmap");
+var _s = $RefreshSig$();
+const Roadmap = ()=>{
+    _s();
+    const roadmap = (0, _useRoadmap.useRoadmap)();
+    return roadmap.length !== 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            console.log("inside roadmap"),
+            roadmap.map((roadmap)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmapCard.RoadmapCard), {
+                    roadData: roadmap
+                }, void 0, false, {
+                    fileName: "src/components/Roadmap.js",
+                    lineNumber: 13,
+                    columnNumber: 33
+                }, undefined);
+            })
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Roadmap.js",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Loading..."
+    }, void 0, false, {
+        fileName: "src/components/Roadmap.js",
+        lineNumber: 17,
+        columnNumber: 9
+    }, undefined);
+};
+_s(Roadmap, "wmZnYGOuXn5oQUJmdTFVOHrr3kQ=", false, function() {
+    return [
+        (0, _useRoadmap.useRoadmap)
+    ];
+});
+_c = Roadmap;
+exports.default = Roadmap;
+var _c;
+$RefreshReg$(_c, "Roadmap");
+
+  $parcel$ReactRefreshHelpers$5bef.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./RoadmapCard":"a9O1K","../../utils/useRoadmap":"hJbKq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a9O1K":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1995 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1995.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "RoadmapCard", ()=>RoadmapCard);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RoadmapCard = (props)=>{
+    console.log(props);
+    return props.roadData ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: props.roadData.id
+    }, void 0, false, {
+        fileName: "src/components/RoadmapCard.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Loading"
+    }, void 0, false, {
+        fileName: "src/components/RoadmapCard.js",
+        lineNumber: 5,
+        columnNumber: 41
+    }, undefined);
+};
+_c = RoadmapCard;
+var _c;
+$RefreshReg$(_c, "RoadmapCard");
+
+  $parcel$ReactRefreshHelpers$1995.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hJbKq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$dd7f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$dd7f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useRoadmap", ()=>useRoadmap);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useRoadmap = ()=>{
+    _s();
+    console.log("inside roadmap hook");
+    const [roadmap, setRoadmap] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        try {
+            fetchRoadmap();
+        } catch (err) {
+            console.log(err);
+        }
+    }, []);
+    const fetchRoadmap = async ()=>{
+        const data = await fetch("https://roadmap.sh/pages.json");
+        const dataJson = await data.json();
+        console.log(dataJson);
+        setRoadmap(dataJson);
+    };
+    return roadmap;
+};
+_s(useRoadmap, "da6Mox6a0oRmUJLcOVj1REDnR2I=");
+
+  $parcel$ReactRefreshHelpers$dd7f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["eOWYJ","1xC6H"], null, "parcelRequiredc33")
+
+//# sourceMappingURL=Roadmap.6e4622e3.js.map

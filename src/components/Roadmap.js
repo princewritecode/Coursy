@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
 import { RoadmapCard } from "./RoadmapCard";
 import { useRoadmap } from "../../utils/useRoadmap";
-export const Roadmap = () =>
+const Roadmap = () =>
 {
     const roadmap = useRoadmap();
     return roadmap.length !== 0 ? (
@@ -18,3 +17,4 @@ export const Roadmap = () =>
     ) : <h1>Loading...</h1>;
 };
 
+export default Roadmap;

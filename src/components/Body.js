@@ -20,7 +20,9 @@ export function Body()
         setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
     };
+
     const onlineStatus = useOnlineStatus();
+
     if (onlineStatus === false)
     {
         return (

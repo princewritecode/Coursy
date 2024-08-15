@@ -2963,35 +2963,36 @@ var _about = require("./components/About");
 var _error = require("./components/Error");
 var _courseinfo = require("./components/Courseinfo");
 var _reactRouterDom = require("react-router-dom");
-var _roadmap = require("./components/Roadmap");
+const Roadmap = /*#__PURE__*/ (0, _react.lazy)(()=>require("16331ab31567a80d"));
+_c = Roadmap;
 function AppLayout() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _header.Header), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 13,
+        lineNumber: 14,
         columnNumber: 9
     }, this);
 }
-_c = AppLayout;
+_c1 = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 22
         }, undefined),
         children: [
@@ -2999,7 +3000,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _body.Body), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 30
                 }, undefined)
             },
@@ -3010,7 +3011,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     course: "react"
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 30
                 }, undefined)
             },
@@ -3018,22 +3019,35 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/course/:courseid",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseinfo.Courseinfo), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 35,
+                    lineNumber: 36,
                     columnNumber: 30
                 }, undefined)
             },
             {
                 path: "/roadmap",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmap.Roadmap), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
+                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Loading..."
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 41,
+                        columnNumber: 45
+                    }, void 0),
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Roadmap, {}, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 42,
+                        columnNumber: 29
+                    }, undefined)
+                }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 39,
-                    columnNumber: 30
+                    lineNumber: 41,
+                    columnNumber: 25
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _error.Error), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 41,
+            lineNumber: 46,
             columnNumber: 30
         }, undefined)
     }
@@ -3043,18 +3057,19 @@ rootElem.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Rou
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 46,
+    lineNumber: 51,
     columnNumber: 17
 }, undefined));
-var _c;
-$RefreshReg$(_c, "AppLayout");
+var _c, _c1;
+$RefreshReg$(_c, "Roadmap");
+$RefreshReg$(_c1, "AppLayout");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/About":"9R1Eu","./components/Error":"kvula","./components/Courseinfo":"9PUqw","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Roadmap":"8q1ll"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/About":"9R1Eu","./components/Error":"kvula","./components/Courseinfo":"9PUqw","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","16331ab31567a80d":"6qCRQ"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -34793,12 +34808,12 @@ function Body() {
         children: "Check your internet connection"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 13
     }, this);
     return course.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 34,
+        lineNumber: 36,
         columnNumber: 31
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -34819,7 +34834,7 @@ function Body() {
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 37,
+                                lineNumber: 39,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34835,13 +34850,13 @@ function Body() {
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 41,
+                                lineNumber: 43,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 36,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34856,13 +34871,13 @@ function Body() {
                         children: "Top Rated Course"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 55,
+                        lineNumber: 57,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 35,
+                lineNumber: 37,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34874,24 +34889,24 @@ function Body() {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 69,
+                            lineNumber: 71,
                             columnNumber: 80
                         }, this)
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 69,
+                        lineNumber: 71,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 65,
+                lineNumber: 67,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 34,
+        lineNumber: 36,
         columnNumber: 53
     }, this);
 }
@@ -37355,137 +37370,74 @@ _s(useCourse, "wRbo/oshyAaMxzgII1AulL+B5cE=");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8q1ll":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5bef = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5bef.prelude(module);
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6qCRQ":[function(require,module,exports) {
+module.exports = require("499574581f8f9538")(require("559f1520ca8bbac").getBundleURL("aXMci") + "Roadmap.6e4622e3.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("8q1ll"));
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Roadmap", ()=>Roadmap);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _roadmapCard = require("./RoadmapCard");
-var _useRoadmap = require("../../utils/useRoadmap");
-var _s = $RefreshSig$();
-const Roadmap = ()=>{
-    _s();
-    const roadmap = (0, _useRoadmap.useRoadmap)();
-    return roadmap.length !== 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            console.log("inside roadmap"),
-            roadmap.map((roadmap)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _roadmapCard.RoadmapCard), {
-                    roadData: roadmap
-                }, void 0, false, {
-                    fileName: "src/components/Roadmap.js",
-                    lineNumber: 14,
-                    columnNumber: 33
-                }, undefined);
-            })
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Roadmap.js",
-        lineNumber: 8,
-        columnNumber: 9
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Loading..."
-    }, void 0, false, {
-        fileName: "src/components/Roadmap.js",
-        lineNumber: 18,
-        columnNumber: 9
-    }, undefined);
-};
-_s(Roadmap, "wmZnYGOuXn5oQUJmdTFVOHrr3kQ=", false, function() {
-    return [
-        (0, _useRoadmap.useRoadmap)
-    ];
-});
-_c = Roadmap;
-var _c;
-$RefreshReg$(_c, "Roadmap");
-
-  $parcel$ReactRefreshHelpers$5bef.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RoadmapCard":"a9O1K","../../utils/useRoadmap":"hJbKq"}],"a9O1K":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1995 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1995.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "RoadmapCard", ()=>RoadmapCard);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const RoadmapCard = (props)=>{
-    console.log(props);
-    return props.roadData ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: props.roadData.id
-    }, void 0, false, {
-        fileName: "src/components/RoadmapCard.js",
-        lineNumber: 5,
-        columnNumber: 9
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Loading"
-    }, void 0, false, {
-        fileName: "src/components/RoadmapCard.js",
-        lineNumber: 5,
-        columnNumber: 41
-    }, undefined);
-};
-_c = RoadmapCard;
-var _c;
-$RefreshReg$(_c, "RoadmapCard");
-
-  $parcel$ReactRefreshHelpers$1995.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hJbKq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$dd7f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$dd7f.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useRoadmap", ()=>useRoadmap);
-var _react = require("react");
-var _s = $RefreshSig$();
-const useRoadmap = ()=>{
-    _s();
-    console.log("inside roadmap hook");
-    const [roadmap, setRoadmap] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        try {
-            fetchRoadmap();
-        } catch (err) {
-            console.log(err);
+},{"499574581f8f9538":"61B45","559f1520ca8bbac":"lgJ39"}],"61B45":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require("ca2a84f7fa4a3bb0");
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName("script");
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
         }
-    }, []);
-    const fetchRoadmap = async ()=>{
-        const data = await fetch("https://roadmap.sh/pages.json");
-        const dataJson = await data.json();
-        console.log(dataJson);
-        setRoadmap(dataJson);
-    };
-    return roadmap;
-};
-_s(useRoadmap, "da6Mox6a0oRmUJLcOVj1REDnR2I=");
+        var preloadLink = document.createElement("link");
+        preloadLink.href = bundle;
+        preloadLink.rel = "preload";
+        preloadLink.as = "script";
+        document.head.appendChild(preloadLink);
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = bundle;
+        script.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script.onerror = script.onload = null;
+            script.remove();
+            reject(error);
+        };
+        script.onload = function() {
+            script.onerror = script.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+});
 
-  $parcel$ReactRefreshHelpers$dd7f.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
+},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
+"use strict";
+var cachedBundles = {};
+var cachedPreloads = {};
+var cachedPrefetches = {};
+function getCache(type) {
+    switch(type){
+        case "preload":
+            return cachedPreloads;
+        case "prefetch":
+            return cachedPrefetches;
+        default:
+            return cachedBundles;
+    }
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiredc33")
+module.exports = function(loader, type) {
+    return function(bundle) {
+        var cache = getCache(type);
+        if (cache[bundle]) return cache[bundle];
+        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
+            delete cache[bundle];
+            throw e;
+        });
+    };
+};
+
+},{}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequiredc33")
 
 //# sourceMappingURL=index.7271efb6.js.map
