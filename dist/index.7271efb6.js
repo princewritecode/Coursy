@@ -37436,15 +37436,35 @@ const Courseinfo = ()=>{
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            className: "text-white",
-                            children: courseInfo.title
-                        }, void 0, false, {
-                            fileName: "src/components/Courseinfo.js",
-                            lineNumber: 29,
-                            columnNumber: 21
-                        }, undefined)
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-white",
+                                children: courseInfo.title
+                            }, void 0, false, {
+                                fileName: "src/components/Courseinfo.js",
+                                lineNumber: 29,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: `https://udemy.com` + courseInfo.primary_subcategory.url,
+                                children: [
+                                    "  ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "p-4 m-4 text-white  bg-black  rounded-md  ",
+                                        children: "Check Course"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Courseinfo.js",
+                                        lineNumber: 30,
+                                        columnNumber: 90
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Courseinfo.js",
+                                lineNumber: 30,
+                                columnNumber: 21
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Courseinfo.js",
                         lineNumber: 28,
                         columnNumber: 17
@@ -37465,7 +37485,7 @@ const Courseinfo = ()=>{
         children: "Loading..."
     }, void 0, false, {
         fileName: "src/components/Courseinfo.js",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 9
     }, undefined);
 };

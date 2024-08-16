@@ -6,13 +6,13 @@ const Roadmap = () =>
 
     console.log(roadmap);
     return roadmap.length !== 0 ? (
-        <div className='flex flex-wrap items-center justify-center gap-4 just m-4 p-4'>
+        <div className='flex flex-wrap items-center justify-center gap-4 just m-4 p-4 '>
             {console.log('inside roadmap')}
             {
                 roadmap.map(
                     (roadmap) =>
                     {
-                        return (<RoadmapCard roadData={roadmap}></RoadmapCard>);
+                        return (<RoadmapCard id={roadmap.id} roadData={roadmap}></RoadmapCard>);
                     })
             }
         </div>

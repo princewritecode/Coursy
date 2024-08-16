@@ -27,6 +27,7 @@ export const Courseinfo = () =>
                 </div>
                 <div>
                     <h2 className="text-white">{courseInfo.title}</h2>
+                    <a href={`https://udemy.com` + courseInfo.primary_subcategory.url}>  <button className="p-4 m-4 text-white  bg-black  rounded-md  ">Check Course</button></a>
                 </div>
 
             </div>
