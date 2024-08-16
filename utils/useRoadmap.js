@@ -16,7 +16,7 @@ export const useRoadmap = () =>
     }, []);
     const fetchRoadmap = async () =>
     {
-        const data = await fetch('https://roadmap.sh/pages.json');
+        const data = await fetch('https://corsproxy-la3g.onrender.com/full/?url=https://roadmap.sh/pages.json');
         const dataJson = await data.json();
         setRoadmap(dataJson);
     };

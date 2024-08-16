@@ -34799,7 +34799,7 @@ function Body() {
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch("https://www.udemy.com/api-2.0/discovery-units/?context=personalized_home&from=0&page_size=6&item_count=18&source_page=logged_out_homepage&locale=en_US&navigation_locale=en&skip_price=true");
+        const data = await fetch("https://corsproxy-la3g.onrender.com/full/?url=https://www.udemy.com/api-2.0/discovery-units/?context=personalized_home&from=0&page_size=6&item_count=18&source_page=logged_out_homepage&locale=en_US&navigation_locale=en&skip_price=true");
         const awaitData = await data.json();
         setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
@@ -34809,12 +34809,12 @@ function Body() {
         children: "Check your internet connection"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 29,
+        lineNumber: 31,
         columnNumber: 13
     }, this);
     return course.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 35,
+        lineNumber: 37,
         columnNumber: 31
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -34834,7 +34834,7 @@ function Body() {
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 38,
+                            lineNumber: 40,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34849,7 +34849,7 @@ function Body() {
                             children: "Search"
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 42,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34863,18 +34863,18 @@ function Body() {
                             children: "Top Rated Course"
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 54,
+                            lineNumber: 56,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 36,
+                lineNumber: 38,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34886,30 +34886,30 @@ function Body() {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 70,
+                            lineNumber: 72,
                             columnNumber: 75
                         }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 70,
+                            lineNumber: 72,
                             columnNumber: 138
                         }, this)
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 68,
+                        lineNumber: 70,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 64,
+                lineNumber: 66,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 35,
+        lineNumber: 37,
         columnNumber: 53
     }, this);
 }
@@ -37529,7 +37529,7 @@ const useCourse = (courseid)=>{
         }
     }, []);
     const fetchCourseInfo = async ()=>{
-        const courseInfoData = await fetch(`https://www.udemy.com/api-2.0/courses/${courseid}/?fields[course]=title,context_info,primary_category,primary_subcategory,avg_rating_recent,visible_instructors,locale,estimated_content_length,num_subscribers`);
+        const courseInfoData = await fetch(`https://corsproxy-la3g.onrender.com/full/?url=https://www.udemy.com/api-2.0/courses/${courseid}/?fields[course]=title,context_info,primary_category,primary_subcategory,avg_rating_recent,visible_instructors,locale,estimated_content_length,num_subscribers`);
         const dataJson = await courseInfoData.json();
         setcourseinfo(dataJson);
     };
