@@ -620,7 +620,9 @@ var _s = $RefreshSig$();
 const Roadmap = ()=>{
     _s();
     const roadmap = (0, _useRoadmap.useRoadmap)();
+    console.log(roadmap);
     return roadmap.length !== 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-wrap items-center justify-center gap-4 just m-4 p-4",
         children: [
             console.log("inside roadmap"),
             roadmap.map((roadmap)=>{
@@ -628,20 +630,20 @@ const Roadmap = ()=>{
                     roadData: roadmap
                 }, void 0, false, {
                     fileName: "src/components/Roadmap.js",
-                    lineNumber: 13,
+                    lineNumber: 15,
                     columnNumber: 33
                 }, undefined);
             })
         ]
     }, void 0, true, {
         fileName: "src/components/Roadmap.js",
-        lineNumber: 7,
+        lineNumber: 9,
         columnNumber: 9
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Loading..."
     }, void 0, false, {
         fileName: "src/components/Roadmap.js",
-        lineNumber: 17,
+        lineNumber: 19,
         columnNumber: 9
     }, undefined);
 };
@@ -672,19 +674,27 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RoadmapCard", ()=>RoadmapCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const RoadmapCard = (props)=>{
-    console.log(props);
-    return props.roadData ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: props.roadData.id
+    console.log(props.roadData);
+    return props.roadData ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[350px] h-[250px] m-4 p-4  bg-gray-300",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            className: "text-4l font-bold",
+            children: props.roadData.id.toUpperCase()
+        }, void 0, false, {
+            fileName: "src/components/RoadmapCard.js",
+            lineNumber: 7,
+            columnNumber: 13
+        }, undefined)
     }, void 0, false, {
         fileName: "src/components/RoadmapCard.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 9
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Loading"
     }, void 0, false, {
         fileName: "src/components/RoadmapCard.js",
-        lineNumber: 5,
-        columnNumber: 41
+        lineNumber: 9,
+        columnNumber: 9
     }, undefined);
 };
 _c = RoadmapCard;
@@ -722,7 +732,6 @@ const useRoadmap = ()=>{
     const fetchRoadmap = async ()=>{
         const data = await fetch("https://roadmap.sh/pages.json");
         const dataJson = await data.json();
-        console.log(dataJson);
         setRoadmap(dataJson);
     };
     return roadmap;

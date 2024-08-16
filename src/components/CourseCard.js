@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../../utils/useOnlineStatus";
-
 export function CourseCard(props)
 {
     const { avg_rating, id, url, image_480x270, headline, published_title } = props.course;
@@ -21,18 +20,15 @@ export function CourseCard(props)
     );
 }
 // Higher order component input- courseCard -> coursecard bestseller
-
 export const bestsellerCourse = () =>
 {
     return (props) =>
     {
-
         return (
             <div>
                 <label className="absolute bg-green-300 text-black border rounded-md px-2">Bestseller</label>
                 <CourseCard {...props}></CourseCard>
             </div>
         );
-
     };
 };

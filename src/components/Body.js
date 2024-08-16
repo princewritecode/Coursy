@@ -22,7 +22,6 @@ export function Body()
         setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
     };
-
     const onlineStatus = useOnlineStatus();
     if (onlineStatus === false)
     {
@@ -32,7 +31,6 @@ export function Body()
             </h1>
         );
     }
-
     return (
         course.length === 0 ? <Shimmer></Shimmer> : <div className="body">
             <div className="filter">
@@ -53,7 +51,6 @@ export function Body()
                             );
                             setCourse(filteredCourse);
                         }}>Search</button>
-
                     <button onClick={() =>
                     {
                         const filtercourse = course.filter((item) =>
@@ -63,7 +60,6 @@ export function Body()
                         setCourse(filtercourse);
                     }} className="px-4 py-1 mx-4 bg-gray-200 rounded-lg hover:bg-gray-300">Top Rated Course</button>
                 </div>
-
             </div>
             <div className="flex flex-wrap justify-center ">
                 {

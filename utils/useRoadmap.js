@@ -18,7 +18,6 @@ export const useRoadmap = () =>
     {
         const data = await fetch('https://roadmap.sh/pages.json');
         const dataJson = await data.json();
-        console.log(dataJson);
         setRoadmap(dataJson);
     };
     return roadmap;

@@ -11,10 +11,10 @@ const Roadmap = lazy(() => import('./components/Roadmap.js'));
 function AppLayout()
 {
     return (
-        <div className="app">
+        <>
             <Header></Header>
             <Outlet></Outlet>
-        </div>
+        </>
     );
 }
 const appRouter = createBrowserRouter(

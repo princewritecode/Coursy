@@ -2966,8 +2966,7 @@ var _reactRouterDom = require("react-router-dom");
 const Roadmap = /*#__PURE__*/ (0, _react.lazy)(()=>require("16331ab31567a80d"));
 _c = Roadmap;
 function AppLayout() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "app",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _header.Header), {}, void 0, false, {
                 fileName: "src/App.js",
@@ -2980,11 +2979,7 @@ function AppLayout() {
                 columnNumber: 13
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "src/App.js",
-        lineNumber: 14,
-        columnNumber: 9
-    }, this);
+    }, void 0, true);
 }
 _c1 = AppLayout;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
@@ -34814,12 +34809,12 @@ function Body() {
         children: "Check your internet connection"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 30,
+        lineNumber: 29,
         columnNumber: 13
     }, this);
     return course.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 37,
+        lineNumber: 35,
         columnNumber: 31
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -34839,7 +34834,7 @@ function Body() {
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 40,
+                            lineNumber: 38,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34854,7 +34849,7 @@ function Body() {
                             children: "Search"
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 44,
+                            lineNumber: 42,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34868,18 +34863,18 @@ function Body() {
                             children: "Top Rated Course"
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 57,
+                            lineNumber: 54,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 39,
+                    lineNumber: 37,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 38,
+                lineNumber: 36,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34891,30 +34886,30 @@ function Body() {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 74,
+                            lineNumber: 70,
                             columnNumber: 75
                         }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 74,
+                            lineNumber: 70,
                             columnNumber: 138
                         }, this)
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 72,
+                        lineNumber: 68,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 68,
+                lineNumber: 64,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 37,
+        lineNumber: 35,
         columnNumber: 53
     }, this);
 }
@@ -34961,7 +34956,7 @@ function CourseCard(props) {
                     className: "border rounded-md "
                 }, void 0, false, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 14,
+                    lineNumber: 13,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -34972,7 +34967,7 @@ function CourseCard(props) {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 15,
+                    lineNumber: 14,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34983,7 +34978,7 @@ function CourseCard(props) {
                             children: "Title"
                         }, void 0, false, {
                             fileName: "src/components/CourseCard.js",
-                            lineNumber: 16,
+                            lineNumber: 15,
                             columnNumber: 43
                         }, this),
                         "  - ",
@@ -34991,7 +34986,7 @@ function CourseCard(props) {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 16,
+                    lineNumber: 15,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35002,20 +34997,20 @@ function CourseCard(props) {
                             children: "Course Information - "
                         }, void 0, false, {
                             fileName: "src/components/CourseCard.js",
-                            lineNumber: 17,
+                            lineNumber: 16,
                             columnNumber: 51
                         }, this),
                         headline
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 17,
+                    lineNumber: 16,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/CourseCard.js",
-            lineNumber: 13,
+            lineNumber: 12,
             columnNumber: 13
         }, this)
     }, void 0, false);
@@ -35030,20 +35025,20 @@ const bestsellerCourse = ()=>{
                     children: "Bestseller"
                 }, void 0, false, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 32,
+                    lineNumber: 29,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
                     ...props
                 }, void 0, false, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 33,
+                    lineNumber: 30,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/CourseCard.js",
-            lineNumber: 31,
+            lineNumber: 28,
             columnNumber: 13
         }, undefined);
     };
@@ -37373,82 +37368,91 @@ var _useCourse = require("../../utils/useCourse");
 var _s = $RefreshSig$();
 const Courseinfo = ()=>{
     _s();
-    // const [courseInfo, setcourseinfo] = useState([]);
     const { courseid } = (0, _reactRouterDom.useParams)();
     const courseInfo = (0, _useCourse.useCourse)(courseid);
-    console.log(courseInfo);
+    // const [summary] = courseInfo.objectives_summary[0];
     console.log(courseInfo);
     return courseInfo && courseInfo.context_info && courseInfo.context_info.category ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "my-10 w-[350px] bg-gray-100 h-[350px] flex flex-col items-center mx-auto border rounded-lg",
+        className: "m-1 h-full bg-gray-500 course-card text-white rounded-lg shadow-md p-6 flex justify-start items-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: courseInfo.visible_instructors[0].image_100x100,
-                className: "w-[150px] h-[150px] my-4 border rounded-md"
+                alt: "Course Instructor",
+                className: "w-48 h-48 object-cover rounded-lg mb-4"
             }, void 0, false, {
                 fileName: "src/components/Courseinfo.js",
                 lineNumber: 13,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "font-bold",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col m-4 ",
                 children: [
-                    "category:  ",
-                    courseInfo.context_info.category.title
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Courseinfo.js",
-                lineNumber: 15,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                className: "flex flex-col items-center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "text-2xl font-bold mb-2 ",
+                        children: courseInfo.context_info.category.title
+                    }, void 0, false, {
+                        fileName: "src/components/Courseinfo.js",
+                        lineNumber: 19,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-gray-600 mb-4",
                         children: courseInfo.context_info.category.name
                     }, void 0, false, {
                         fileName: "src/components/Courseinfo.js",
-                        lineNumber: 17,
+                        lineNumber: 20,
                         columnNumber: 17
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "font-medium m-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "font-bold",
-                                children: "Instructor: "
-                            }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex flx-col justify-between items-center",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                            className: "flex flex-col  items-start",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "font-medium m-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "font-bold",
+                                        children: "Instructor: "
+                                    }, void 0, false, {
+                                        fileName: "src/components/Courseinfo.js",
+                                        lineNumber: 23,
+                                        columnNumber: 57
+                                    }, undefined),
+                                    courseInfo.visible_instructors[0].display_name
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Courseinfo.js",
-                                lineNumber: 18,
-                                columnNumber: 49
-                            }, undefined),
-                            courseInfo.visible_instructors[0].display_name
-                        ]
-                    }, void 0, true, {
+                                lineNumber: 23,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Courseinfo.js",
+                            lineNumber: 22,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/components/Courseinfo.js",
-                        lineNumber: 18,
+                        lineNumber: 21,
                         columnNumber: 17
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "font-bold",
-                                children: "Enrolled Students:"
-                            }, void 0, false, {
-                                fileName: "src/components/Courseinfo.js",
-                                lineNumber: 19,
-                                columnNumber: 21
-                            }, undefined),
-                            courseInfo.num_subscribers
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            className: "text-white",
+                            children: courseInfo.title
+                        }, void 0, false, {
+                            fileName: "src/components/Courseinfo.js",
+                            lineNumber: 29,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/components/Courseinfo.js",
-                        lineNumber: 19,
+                        lineNumber: 28,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Courseinfo.js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 13
             }, undefined)
         ]
@@ -37457,10 +37461,11 @@ const Courseinfo = ()=>{
         lineNumber: 12,
         columnNumber: 9
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        className: "text-center",
         children: "Loading..."
     }, void 0, false, {
         fileName: "src/components/Courseinfo.js",
-        lineNumber: 22,
+        lineNumber: 36,
         columnNumber: 9
     }, undefined);
 };
