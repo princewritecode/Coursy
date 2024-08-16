@@ -37116,91 +37116,89 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _userclass = require("./Userclass");
 function About() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-                class: "text-gray-700 body-font m-4",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+            className: "flex item-start justify-start  text-gray-700 body-font  bg-gray-400 w-full",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "container mx-auto flex flex-col items-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    class: "container mx-auto flex flex-col items-center",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "lg:w-2/3 flex flex-col items-center text-center",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                class: "text-gray-900 text-3xl title-font font-medium mb-4",
-                                children: "Our Vision"
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 12,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                class: "mb-8 leading-relaxed",
-                                children: "We aim to empower aspiring developers by providing a platform that simplifies the journey to mastering coding. Our platform offers curated high-rated courses from Udemy, tailored roadmaps to guide learners, and a supportive community to foster growth. Whether you're a beginner taking your first steps or an experienced developer looking to expand your skill set, we're here to assist you in achieving your coding goals."
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 13,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/About.js",
-                        lineNumber: 11,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 9,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center items-center min-h-screen",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "max-w-md bg-white rounded-lg shadow-md p-6",
+                    className: " lg:w-2/3 flex flex-col my-28 item- text-center",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-center",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-2xl font-bold text-gray-800",
-                                children: "About Me"
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 25,
-                                columnNumber: 25
-                            }, this)
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            className: "text-gray-900 text-3xl title-font font-medium mb-4",
+                            children: "Vision"
                         }, void 0, false, {
                             fileName: "src/components/About.js",
-                            lineNumber: 23,
-                            columnNumber: 21
+                            lineNumber: 12,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "mb-8 leading-relaxed",
+                            children: "We aim to empower aspiring developers by providing a platform that simplifies the journey to mastering coding. Our platform offers curated high-rated courses from Udemy, tailored roadmaps to guide learners, and a supportive community to foster growth. Whether you're a beginner taking your first steps or an experienced developer looking to expand your skill set, we're here to assist you in achieving your coding goals."
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 13,
+                            columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "mt-4",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userclass.User), {}, void 0, false, {
+                            className: "flex justify-center items-center min-h-screen",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "max-w-md bg-white rounded-lg shadow-md p-6",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "text-center",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            className: "text-2xl font-bold text-gray-800",
+                                            children: "About Me"
+                                        }, void 0, false, {
+                                            fileName: "src/components/About.js",
+                                            lineNumber: 20,
+                                            columnNumber: 37
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/About.js",
+                                        lineNumber: 18,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "mt-4",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userclass.User), {}, void 0, false, {
+                                            fileName: "src/components/About.js",
+                                            lineNumber: 23,
+                                            columnNumber: 37
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/About.js",
+                                        lineNumber: 22,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/About.js",
-                                lineNumber: 28,
-                                columnNumber: 25
+                                lineNumber: 17,
+                                columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/About.js",
-                            lineNumber: 27,
-                            columnNumber: 21
+                            lineNumber: 16,
+                            columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/About.js",
-                    lineNumber: 22,
-                    columnNumber: 17
+                    lineNumber: 11,
+                    columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/About.js",
-                lineNumber: 21,
-                columnNumber: 13
+                lineNumber: 10,
+                columnNumber: 17
             }, this)
-        ]
-    }, void 0, true);
+        }, void 0, false, {
+            fileName: "src/components/About.js",
+            lineNumber: 9,
+            columnNumber: 13
+        }, this)
+    }, void 0, false);
 }
 _c = About;
 var _c;
@@ -37529,7 +37527,7 @@ const useCourse = (courseid)=>{
         }
     }, []);
     const fetchCourseInfo = async ()=>{
-        const courseInfoData = await fetch(`https://corsproxy-la3g.onrender.com/full/?url=https://www.udemy.com/api-2.0/courses/${courseid}/?fields[course]=title,context_info,primary_category,primary_subcategory,avg_rating_recent,visible_instructors,locale,estimated_content_length,num_subscribers`);
+        const courseInfoData = await fetch(`https://corsproxy-la3g.onrender.com/full/?url=chttps://www.udemy.com/api-2.0/courses/${courseid}/?fields[course]=title,context_info,primary_category,primary_subcategory,avg_rating_recent,visible_instructors,locale,estimated_content_length,num_subscribers`);
         const dataJson = await courseInfoData.json();
         setcourseinfo(dataJson);
     };

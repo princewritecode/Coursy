@@ -298,6 +298,10 @@ img, video {
   margin: 1rem;
 }
 
+.m-20 {
+  margin: 5rem;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -321,6 +325,16 @@ img, video {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-28 {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 
 .mb-2 {
@@ -377,6 +391,10 @@ img, video {
 
 .w-\[350px\] {
   width: 350px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-md {
@@ -478,6 +496,11 @@ img, video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .object-cover {
