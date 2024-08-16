@@ -18,7 +18,7 @@ Testing: Jest
 Getting Started
 Clone the repository:
 Bash
-git clone https://github.com/your-username/udemy-course-finder.git
+git clone https://github.com/princewritecode/Coursy.git
 Use code with caution.
 
 Install dependencies:
