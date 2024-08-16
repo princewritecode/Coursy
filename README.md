@@ -1,4 +1,4 @@
-# Project Title
+# Coursy
 
 This application empowers learners to discover top-rated Udemy courses and create personalized learning roadmaps. It leverages React for UI, Tailwind CSS for styling, Redux Toolkit for state management, and Jest for testing. The app seamlessly integrates live API data to provide up-to-date course information.
 
