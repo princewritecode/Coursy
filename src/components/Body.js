@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../../utils/useOnlineStatus";
+import { bestsellerCourse } from "./CourseCard";
 export function Body()
 {
     const [course, setCourse] = useState([]);
     const [searchText, setsearch] = useState("");
     const [origCourse, setOrigcourse] = useState([]);
+    const BestsellerCourseCard = bestsellerCourse(CourseCard);
     useEffect(() =>
     {
         fetchData();
@@ -22,7 +24,6 @@ export function Body()
     };
 
     const onlineStatus = useOnlineStatus();
-    console.log(course);
     if (onlineStatus === false)
     {
         return (
@@ -50,13 +51,11 @@ export function Body()
                                     return elem.title.toLowerCase().includes(searchText.toLowerCase());
                                 }
                             );
-                            console.log(filteredCourse);
                             setCourse(filteredCourse);
                         }}>Search</button>
 
                     <button onClick={() =>
                     {
-                        console.log('clicked');
                         const filtercourse = course.filter((item) =>
                         {
                             return item.avg_rating.toFixed(1) > 4.6;
@@ -70,7 +69,11 @@ export function Body()
                 {
                     course.map((items) =>
                     {
-                        return <Link key={items.id} to={'/course/' + items.id}><CourseCard course={items}></CourseCard></Link>;
+                        return <Link key={items.id} to={'/course/' + items.id}>
+                            {
+                                items.bestseller_badge_content !== null ? <BestsellerCourseCard course={items}></BestsellerCourseCard> : <CourseCard course={items}></CourseCard>
+                            }
+                        </Link>;
                     })
                 }
             </div>

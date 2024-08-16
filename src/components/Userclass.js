@@ -35,7 +35,7 @@ export class User extends React.Component
 
                 <div className="flex flex-col items-center gap-4">
                     <img className="w-48" src={avatar_url}></img>
-                    <h1>
+                    <h1 className="font-bold">
                         {name}
                     </h1>
                     <p>{bio}</p>

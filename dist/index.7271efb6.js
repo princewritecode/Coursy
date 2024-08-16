@@ -34799,6 +34799,7 @@ function Body() {
     const [course, setCourse] = (0, _react.useState)([]);
     const [searchText, setsearch] = (0, _react.useState)("");
     const [origCourse, setOrigcourse] = (0, _react.useState)([]);
+    const BestsellerCourseCard = (0, _courseCard.bestsellerCourse)((0, _courseCard.CourseCard));
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -34809,17 +34810,16 @@ function Body() {
         setCourse(awaitData.units[0].items);
     };
     const onlineStatus = (0, _useOnlineStatus.useOnlineStatus)();
-    console.log(course);
     if (onlineStatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Check your internet connection"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 13
     }, this);
     return course.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 31
     }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -34839,7 +34839,7 @@ function Body() {
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 39,
+                            lineNumber: 40,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34849,18 +34849,16 @@ function Body() {
                                 const filteredCourse = origCourse.filter((elem)=>{
                                     return elem.title.toLowerCase().includes(searchText.toLowerCase());
                                 });
-                                console.log(filteredCourse);
                                 setCourse(filteredCourse);
                             },
                             children: "Search"
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 43,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             onClick: ()=>{
-                                console.log("clicked");
                                 const filtercourse = course.filter((item)=>{
                                     return item.avg_rating.toFixed(1) > 4.6;
                                 });
@@ -34876,12 +34874,12 @@ function Body() {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 38,
+                    lineNumber: 39,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34889,28 +34887,34 @@ function Body() {
                 children: course.map((items)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/course/" + items.id,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
+                        children: items.bestseller_badge_content !== null ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(BestsellerCourseCard, {
                             course: items
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 73,
-                            columnNumber: 80
+                            lineNumber: 74,
+                            columnNumber: 75
+                        }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
+                            course: items
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 74,
+                            columnNumber: 138
                         }, this)
                     }, items.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 73,
+                        lineNumber: 72,
                         columnNumber: 32
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 69,
+                lineNumber: 68,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 53
     }, this);
 }
@@ -34938,6 +34942,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CourseCard", ()=>CourseCard);
+parcelHelpers.export(exports, "bestsellerCourse", ()=>bestsellerCourse);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _courseCard = require("./CourseCard");
 var _courseData = require("../../utils/courseData");
@@ -34947,7 +34952,6 @@ var _reactRouterDom = require("react-router-dom");
 var _useOnlineStatus = require("../../utils/useOnlineStatus");
 function CourseCard(props) {
     const { avg_rating, id, url, image_480x270, headline, published_title } = props.course;
-    console.log(url);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "flex flex-col justify-center p-4 m-4 w-[250px] bg-gray-100 border rounded-md h-[500px] hover:bg-slate-200",
@@ -34957,7 +34961,7 @@ function CourseCard(props) {
                     className: "border rounded-md "
                 }, void 0, false, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 15,
+                    lineNumber: 14,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -34968,7 +34972,7 @@ function CourseCard(props) {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 16,
+                    lineNumber: 15,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34979,7 +34983,7 @@ function CourseCard(props) {
                             children: "Title"
                         }, void 0, false, {
                             fileName: "src/components/CourseCard.js",
-                            lineNumber: 17,
+                            lineNumber: 16,
                             columnNumber: 43
                         }, this),
                         "  - ",
@@ -34987,7 +34991,7 @@ function CourseCard(props) {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 17,
+                    lineNumber: 16,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34998,25 +35002,52 @@ function CourseCard(props) {
                             children: "Course Information - "
                         }, void 0, false, {
                             fileName: "src/components/CourseCard.js",
-                            lineNumber: 18,
+                            lineNumber: 17,
                             columnNumber: 51
                         }, this),
                         headline
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CourseCard.js",
-                    lineNumber: 18,
+                    lineNumber: 17,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/CourseCard.js",
-            lineNumber: 14,
+            lineNumber: 13,
             columnNumber: 13
         }, this)
     }, void 0, false);
 }
 _c = (0, _courseCard.CourseCard);
+const bestsellerCourse = ()=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    className: "absolute bg-green-300 text-black border rounded-md px-2",
+                    children: "Bestseller"
+                }, void 0, false, {
+                    fileName: "src/components/CourseCard.js",
+                    lineNumber: 32,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _courseCard.CourseCard), {
+                    ...props
+                }, void 0, false, {
+                    fileName: "src/components/CourseCard.js",
+                    lineNumber: 33,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/CourseCard.js",
+            lineNumber: 31,
+            columnNumber: 13
+        }, undefined);
+    };
+};
 var _c;
 $RefreshReg$(_c, "CourseCard");
 
@@ -37236,6 +37267,7 @@ class User extends (0, _reactDefault.default).Component {
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold",
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/Userclass.js",

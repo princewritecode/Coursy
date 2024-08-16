@@ -8,7 +8,6 @@ import { useOnlineStatus } from "../../utils/useOnlineStatus";
 export function CourseCard(props)
 {
     const { avg_rating, id, url, image_480x270, headline, published_title } = props.course;
-    console.log(url);
     return (
         <>
             <div className="flex flex-col justify-center p-4 m-4 w-[250px] bg-gray-100 border rounded-md h-[500px] hover:bg-slate-200">
@@ -21,3 +20,19 @@ export function CourseCard(props)
         </>
     );
 }
+// Higher order component input- courseCard -> coursecard bestseller
+
+export const bestsellerCourse = () =>
+{
+    return (props) =>
+    {
+
+        return (
+            <div>
+                <label className="absolute bg-green-300 text-black border rounded-md px-2">Bestseller</label>
+                <CourseCard {...props}></CourseCard>
+            </div>
+        );
+
+    };
+};
