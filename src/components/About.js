@@ -1,11 +1,9 @@
 import React from "react";
 import { User } from './Userclass';
-
 export function About()
 {
     return (
         <>
-
             <section className="flex item-start justify-start  text-gray-700 body-font  bg-gray-400 w-full">
                 <div className="container mx-auto flex flex-col items-center">
                     <div className=" lg:w-2/3 flex flex-col my-28 item- text-center">

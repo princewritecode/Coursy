@@ -5,12 +5,47 @@ import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../../utils/useOnlineStatus";
 import { bestsellerCourse } from "./CourseCard";
+import { auth } from "../../utils/firebase";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+
 export function Body()
 {
     const [course, setCourse] = useState([]);
     const [searchText, setsearch] = useState("");
     const [origCourse, setOrigcourse] = useState([]);
     const BestsellerCourseCard = bestsellerCourse(CourseCard);
+
+    const navigate = useNavigate();
+    const auth = getAuth();
+
+    useEffect(() =>
+    {
+        const unsubscribe = onAuthStateChanged(auth, (user) =>
+        {
+            if (!user)
+            {
+                navigate("/");
+            }
+        });
+
+        return unsubscribe;
+    }, [auth, navigate]);
+
+    const handleLogout = async () =>
+    {
+        try
+        {
+            await signOut(auth);
+            navigate("/");
+        } catch (error)
+        {
+            console.error("Error signing out:", error);
+        }
+    };
+
+
     useEffect(() =>
     {
         fetchData();
@@ -61,13 +96,15 @@ export function Body()
                         });
                         setCourse(filtercourse);
                     }} className="px-4 py-1 mx-4 bg-gray-200 rounded-lg hover:bg-gray-300">Top Rated Course</button>
+
+                    <button onClick={() => { handleLogout(); }} className="px-4 py-1 mx-4 bg-gray-200 rounded-lg hover:bg-gray-300">Logout</button>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center ">
                 {
                     course.map((items) =>
                     {
-                        return <Link key={items.id} to={'/course/' + items.id}>
+                        return <Link key={items.id} to={'/browse/course/' + items.id}>
                             {
                                 items.bestseller_badge_content !== null ? <BestsellerCourseCard course={items}></BestsellerCourseCard> : <CourseCard course={items}></CourseCard>
                             }
