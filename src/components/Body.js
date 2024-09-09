@@ -16,10 +16,8 @@ export function Body()
     const [searchText, setsearch] = useState("");
     const [origCourse, setOrigcourse] = useState([]);
     const BestsellerCourseCard = bestsellerCourse(CourseCard);
-
     const navigate = useNavigate();
     const auth = getAuth();
-
     useEffect(() =>
     {
         const unsubscribe = onAuthStateChanged(auth, (user) =>
@@ -29,10 +27,8 @@ export function Body()
                 navigate("/");
             }
         });
-
         return unsubscribe;
     }, [auth, navigate]);
-
     const handleLogout = async () =>
     {
         try
@@ -44,21 +40,17 @@ export function Body()
             console.error("Error signing out:", error);
         }
     };
-
-
     useEffect(() =>
     {
         fetchData();
     }, []);
     const fetchData = async () =>
     {
-
-        const data = await fetch('https://corsproxy-la3g.onrender.com/full/?url=https://www.udemy.com/api-2.0/discovery-units/?context=personalized_home&from=0&page_size=6&item_count=18&source_page=logged_out_homepage&locale=en_US&navigation_locale=en&skip_price=true');
+        const data = await fetch('https://www.udemy.com/api-2.0/discovery-units/?context=personalized_home&from=0&page_size=6&item_count=18&source_page=logged_out_homepage&locale=en_US&navigation_locale=en&skip_price=true');
         const awaitData = await data.json();
         setOrigcourse(awaitData.units[0].items);
         setCourse(awaitData.units[0].items);
     };
-
     const onlineStatus = useOnlineStatus();
     if (onlineStatus === false)
     {
@@ -68,6 +60,7 @@ export function Body()
             </h1>
         );
     }
+    console.log(course);
     return (
         course.length === 0 ? <Shimmer></Shimmer> : <div className="body">
             <div className="filter">

@@ -1,63 +1,46 @@
-import React, { Suspense, lazy } from "react";
-import ReactDOM from "react-dom/client";
-import { Header } from "./components/Header";
-import { Body } from "./components/Body";
-import { About } from "./components/About";
-import { Error } from "./components/Error";
-import { Courseinfo } from "./components/Courseinfo";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { Provider } from "react-redux";
-import appStore from "../utils/appStore.js";
-import { Cart } from "./components/Cart.js";
-import { Login } from "./components/Login.js";
-
-const Roadmap = lazy(() => import('./components/Roadmap.js'));
-function AppLayout()
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import ReactDOM from 'react-dom/client';
+const Todos = () =>
 {
-    return (
-        <>
-            <Provider store={appStore}>
-                <Header></Header>
-                <Outlet></Outlet>
-            </Provider>
-        </>
-    );
-}
-const appRouter = createBrowserRouter(
-    [{ path: '/', element: <Login></Login> },
+
+    try
     {
-        path: "/browse",
-        element: <AppLayout></AppLayout>,
-        children: [
-
-            {
-                path: '/browse',
-                element: <Body></Body>
-            },
-            {
-                path: '/browse/about',
-                element: <About user="prince" course="react"></About>
-            },
-            {
-                path: '/browse/course/:courseid',
-                element: <Courseinfo></Courseinfo>
-            },
-            {
-                path: '/browse/roadmap',
-                element: (
-                    <Suspense fallback={<h1>Loading...</h1>}>
-                        <Roadmap></Roadmap>
-                    </Suspense>
-                )
-            },
-            {
-                path: 'browse/cart',
-                element: <Cart></Cart>
-            }
-        ], errorElement: <Error></Error>
+        const [list, setList] = useState();
+        useEffect(async () =>
+        {
+            const response = fetch("https://dummyjson.com/todos");
+            response
+                .then((value) =>
+                {
+                    const data = value.json();
+                    return data;
+                })
+                .then((data) =>
+                {
+                    setList(data.todos);
+                });
+        }, []);
+        console.log(list);
+        return (
+            <>
+                <ul>
+                    {list.map((elem) =>
+                    {
+                        return <li>{elem.todo}</li>;
+                    }
+                    )
+                    }
+                </ul>
+            </>
+        );
     }
-    ]
-);
+    catch (error)
+    {
+        console.log(error);
+    }
+}
+    ;
 const rootElem = ReactDOM.createRoot(document.getElementById('root'));
-rootElem.render(<RouterProvider router={appRouter}></RouterProvider>);
-
+rootElem.render(<Todos></Todos>);

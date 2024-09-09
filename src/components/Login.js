@@ -12,7 +12,6 @@ export const Login = () =>
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const authInstance = getAuth();
-
     useEffect(() =>
     {
         const unsubscribe = onAuthStateChanged(authInstance, (user) =>

@@ -17,7 +17,7 @@ export const useCourse = (courseid) =>
     }, []);
     const fetchCourseInfo = async () =>
     {
-        const courseInfoData = await fetch(`https://corsproxy-la3g.onrender.com/full/?url=https://www.udemy.com/api-2.0/courses/${courseid}/?fields[course]=title,context_info,primary_category,primary_subcategory,avg_rating_recent,visible_instructors,locale,estimated_content_length,num_subscribers`);
+        const courseInfoData = await fetch(`https://www.udemy.com/api-2.0/courses/${courseid}/?fields[course]=title,context_info,primary_category,primary_subcategory,avg_rating_recent,visible_instructors,locale,estimated_content_length,num_subscribers`);
         const dataJson = await courseInfoData.json();
         setcourseinfo(dataJson);
     };
