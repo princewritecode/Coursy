@@ -10,8 +10,12 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
+
+
 export function Body()
 {
+
+
     const [course, setCourse] = useState([]);
     const [searchText, setsearch] = useState("");
     const [origCourse, setOrigcourse] = useState([]);
@@ -97,7 +101,7 @@ export function Body()
                 {
                     course.map((items) =>
                     {
-                        return <Link key={items.id} to={'/browse/course/' + items.id}>
+                        return <Link key={items.id} to={'/course/' + items.id}>
                             {
                                 items.bestseller_badge_content !== null ? <BestsellerCourseCard course={items}></BestsellerCourseCard> : <CourseCard course={items}></CourseCard>
                             }

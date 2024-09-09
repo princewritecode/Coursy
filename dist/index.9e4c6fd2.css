@@ -358,6 +358,10 @@ img, video {
   display: flex;
 }
 
+.contents {
+  display: contents;
+}
+
 .h-48 {
   height: 12rem;
 }
